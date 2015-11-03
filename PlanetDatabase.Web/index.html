@@ -1,0 +1,40 @@
+﻿
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>PlanetDatabase.com</title>
+    <link href="Content/bootstrap.min.css" rel="stylesheet" />
+    <link href="Content/site.css" rel="stylesheet" />
+
+
+</head>
+<body onload="InitViewModel(
+    new restProvider('http://localhost:8085/PlanetService')
+    //new testInMemProvider()
+    //new testInMemProviderError()
+    //null
+    );";>    
+    <div class="container narrow">
+        <h1>PlanetDatabase.com</h1>
+        <table class="center">
+            <tr>
+                <td class="left">
+                    <h3>Welcome to PlanetDatabase.com </h3>
+                    <p>Please see the list of planets in our solar system on the right hand side.</p>
+                </td>
+                <td class="right" id="listContainer">                    
+                </td>
+            </tr>
+        </table>
+    </div>
+
+    <script src="Scripts/jquery-2.1.0.min.js"></script>        
+    <script src="Scripts/dao.js"></script>
+    <script src="Scripts/restProvider.js"></script>
+    <!--
+    <script src="Scripts/testInMemProvider.js"></script>
+    <script src="Scripts/testInMemProviderError.js"></script>    
+    -->
+    <script src="Scripts/IndexViewModel.js"></script>    
+</body>
+</html>
