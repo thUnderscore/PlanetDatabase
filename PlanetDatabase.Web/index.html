@@ -8,12 +8,7 @@
 
 
 </head>
-<body onload="InitViewModel(
-    new restProvider('http://localhost:8085/PlanetService')
-    //new testInMemProvider()
-    //new testInMemProviderError()
-    //null
-    );";>    
+<body>    
     <div class="container narrow">
         <h1>PlanetDatabase.com</h1>
         <table class="center">
@@ -35,6 +30,18 @@
     <script src="Scripts/testInMemProvider.js"></script>
     <script src="Scripts/testInMemProviderError.js"></script>    
     -->
-    <script src="Scripts/IndexViewModel.js"></script>    
+    <script src="Scripts/IndexViewModel.js"></script>
+    <script language="javascript">
+        window.onload = function(e){
+            InitViewModel(
+                new restProvider('http://localhost:8085/PlanetService')
+                //new testInMemProvider()
+                //new testInMemProviderError()
+                //null
+                );
+        }
+    </script>
+
+
 </body>
 </html>
